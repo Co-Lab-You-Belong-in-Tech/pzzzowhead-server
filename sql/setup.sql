@@ -11,5 +11,7 @@ CREATE TABLE users (
   wind_down_length VARCHAR(30),
   wind_down_alarm TIME with time zone,
   personality VARCHAR(30),
-  sign_up_date VARCHAR(128)
+  sign_up_date VARCHAR(128),
+  alarm_tally INTEGER NOT NULL,
+  streak_tally INTEGER NOT NULL,
 );
