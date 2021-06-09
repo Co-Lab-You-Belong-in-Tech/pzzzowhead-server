@@ -10,5 +10,6 @@ CREATE TABLE users (
   bed_Time_alarm TIME with time zone,
   wind_down_length VARCHAR(30),
   wind_down_alarm TIME with time zone,
-  personality VARCHAR(30)
+  personality VARCHAR(30),
+  sign_up_date VARCHAR(128)
 );
