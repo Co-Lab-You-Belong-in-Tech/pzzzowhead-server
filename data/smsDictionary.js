@@ -8,7 +8,7 @@ const smsDictionary = {
     },
     followUp:
     function(phoneNumber) {
-      sendSms(phoneNumber, `Creating new habits aren't easy- but you CAN do it and I will be here for you! Text 'EDIT' to cange your settings or 'STOP' to unsubscribe`)
+      sendSms(phoneNumber, `Creating new habits aren't easy- but you CAN do it and I will be here for you! Text 'EDIT' to change your settings or 'STOP' to unsubscribe`)
     }
   },
   windDown: {
@@ -50,7 +50,7 @@ const smsDictionary = {
   bedTime: {
     dayOne: 
       function(phoneNumber, sleepLength) {
-      sendSms(phoneNumber, `It's time for bed! DOn't worry- you get to wind down again tomorrow. ${sleepLength} until you wake up!`
+      sendSms(phoneNumber, `It's time for bed! Don't worry- you get to wind down again tomorrow. ${sleepLength} until you wake up!`
         )
       },
     standard:
