@@ -8,7 +8,7 @@ const smsDictionary = {
     },
     followUp:
     function(phoneNumber) {
-      sendSMS(phoneNumber, `Creating new habits aren't easy- but you CAN do it and I will be here for you! Text 'EDIT' to cange your settings or 'STOP' to unsubscribe`)
+      sendSms(phoneNumber, `Creating new habits aren't easy- but you CAN do it and I will be here for you! Text 'EDIT' to cange your settings or 'STOP' to unsubscribe`)
     }
   },
   windDown: {
