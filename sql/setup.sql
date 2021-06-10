@@ -13,5 +13,5 @@ CREATE TABLE users (
   personality VARCHAR(30),
   sign_up_date VARCHAR(128),
   alarm_tally INTEGER NOT NULL,
-  streak_tally INTEGER NOT NULL,
+  streak_tally INTEGER NOT NULL
 );
