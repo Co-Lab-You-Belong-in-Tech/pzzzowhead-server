@@ -3,7 +3,7 @@ DROP TABLE IF EXISTS users;
 CREATE TABLE users (
   id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
   user_name TEXT,
-  phone_number VARCHAR(20) UNIQUE,
+  phone_number VARCHAR(20),
   wake_up_time TIME with time zone,
   weekday TEXT ARRAY,
   sleep_length VARCHAR(30),
