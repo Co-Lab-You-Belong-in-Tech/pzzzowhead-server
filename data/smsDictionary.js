@@ -78,7 +78,7 @@ const smsDictionary = {
     dayTwo: {
       yesYes: 
         function(phoneNumber) {
-        sendSms(phoneNumber, `AW YEAH! That's a 2 day streak! Keep it going!`)
+        sendSms(phoneNumber, `AW YEAH! That's a 2 day streak! Keep it going! 🎉`)
         },
       yesNo: 
         function(phoneNumber) {
