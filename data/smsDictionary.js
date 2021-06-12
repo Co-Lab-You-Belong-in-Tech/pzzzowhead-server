@@ -1,10 +1,11 @@
-const sendSms = require('../lib/utils/SendSms')
+const sendSms = require('../lib/utils/SendSms');
+const weekdayConvertor = require('../lib/utils/weekdayConvertor')
 
 const smsDictionary = {
   confirmation: {
     main:
     function(phoneNumber, windDownAlarm, bedTimeAlarm, days, cb) {
-      sendSms(phoneNumber, `Hi! I'm Pzzzow. I'll text you at ${cb(windDownAlarm)} for wind down and ${cb(bedTimeAlarm)} for bedtime on ${days}`)
+      sendSms(phoneNumber, `Hi! I'm Pzzzow. I'll text you at ${cb(windDownAlarm)} for wind down and ${cb(bedTimeAlarm)} for bedtime on ${weekdayConvertor(days)}`)
     },
     followUp:
     function(phoneNumber) {
