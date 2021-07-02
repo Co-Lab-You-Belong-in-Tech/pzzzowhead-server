@@ -1,10 +1,11 @@
-const sendSms = require('../lib/utils/SendSms')
+const sendSms = require('../lib/utils/SendSms');
+const weekdayConvertor = require('../lib/utils/weekdayConvertor')
 
 const smsDictionary = {
   confirmation: {
     main:
     function(phoneNumber, windDownAlarm, bedTimeAlarm, days, cb) {
-      sendSms(phoneNumber, `Hi! I'm Pzzzow. I'll text you at ${cb(windDownAlarm)} for wind down and ${cb(bedTimeAlarm)} for bedtime on ${days}`)
+      sendSms(phoneNumber, `Hi! I'm Pzzzow. I'll text you at ${cb(windDownAlarm)} for wind down and ${cb(bedTimeAlarm)} for bedtime on ${weekdayConvertor(days)}`)
     },
     followUp:
     function(phoneNumber) {
@@ -96,7 +97,7 @@ const smsDictionary = {
     standard: {
       yes: 
         function(phoneNumber, streakAmount) {
-        sendSms(phoneNumber,  `You are on a ${streakAmount} day streak! You got this!`)
+        sendSms(phoneNumber,  `You are on a ${streakAmount + 1} day streak! You got this!`)
         },
       No: 
         function(phoneNumber) {
@@ -116,6 +117,10 @@ const smsDictionary = {
       yes: 
       function(phoneNumber) {
         sendSms(phoneNumber, `Here's a link to change your settings. www.pzzzowhead.com`)
+      },
+      genericStop: 
+      function(phoneNumber, userName) {
+        sendSms(phoneNumber, `${userName} is unsubscribed from service. We're sorry you want to stop receiving texts. Pzzzow will miss you!`)
       }
   },
   genericResponse:
