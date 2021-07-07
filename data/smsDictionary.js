@@ -110,18 +110,18 @@ const smsDictionary = {
     function(phoneNumber) {
       sendSms(phoneNumber, `We're sorry you want to stop receiving texts. Would you like to swap Pzzzow's personality or change your settings?`)
       },
-      no: 
-      function(phoneNumber, userName) {
-        sendSms(phoneNumber, `${userName} is unsubscribed from service. We're sad to see you go. What's not working? 1. 2. 3.`)
-        },
-      yes: 
-      function(phoneNumber) {
-        sendSms(phoneNumber, `Here's a link to change your settings. www.pzzzowhead.com`)
+    no: 
+    function(phoneNumber, userName) {
+      sendSms(phoneNumber, `${userName} is unsubscribed from service. We're sad to see you go. What's not working? 1. 2. 3.`)
       },
-      genericStop: 
-      function(phoneNumber, userName) {
-        sendSms(phoneNumber, `${userName} is unsubscribed from service. We're sorry you want to stop receiving texts. Pzzzow will miss you!`)
-      }
+    yes: 
+    function(phoneNumber) {
+      sendSms(phoneNumber, `Here's a link to change your settings. www.pzzzowhead.com`)
+    },
+    genericStop: 
+    function(phoneNumber, userName) {
+      sendSms(phoneNumber, `${userName} is unsubscribed from service. We're sorry you want to stop receiving texts. Pzzzow will miss you!`)
+    }
   },
   genericResponse:
   function(phoneNumber) {
